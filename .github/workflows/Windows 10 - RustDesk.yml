@@ -17,7 +17,10 @@ jobs:
 
       - name: Log In To AnyDesk
         run: |
-          for /l %%i in (1,1,5) do (
+          for ($i=1; $i -le 5; $i++) {
+    # Your loop code here
+    }
+
             cmd /c show.bat
             IF %ERRORLEVEL% EQU 0 EXIT /B
             timeout /t 30 /nobreak
